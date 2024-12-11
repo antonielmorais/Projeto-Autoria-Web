@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Cor de fundo suave */
+    color: #333; /* Cor do texto */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Texto branco */
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem; /* Tamanho grande para o título */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o conteúdo principal */
+main {
+    background-color: #fff; /* Cor de fundo branco */
+    padding: 20px;
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+main h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+main h3 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-top: 20px;
+}
+
+main h4 {
+    font-size: 1.25rem;
+    color: #666;
+    margin-top: 15px;
+}
+
+main p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+main ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+main ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilo para o rodapé */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 0.875rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p:first-child {
+    font-weight: bold;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+}

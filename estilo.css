@@ -1,0 +1,157 @@
+header {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Texto branco */
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem; /* Tamanho grande para o título */
+
+}
+/* Estilo para centralizar o título Designer Network */
+h2 {
+    text-align: center;
+    margin-top: 20px;  /* Adiciona um espaço entre o topo da página e o título */
+    font-size: 2em;    /* Ajusta o tamanho da fonte do título */
+    font-weight: bold; /* Torna o título em negrito */
+}
+
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o formulário */
+form {
+    display: flex;
+    flex-direction: column; /* Alinha os itens em uma coluna (um abaixo do outro) */
+    gap: 15px; /* Espaçamento entre os elementos do formulário */
+    max-width: 500px; /* Limita a largura do formulário */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    padding: 20px;
+    border: 1px solid #ccc; /* Adiciona uma borda ao redor do formulário */
+    border-radius: 8px; /* Arredonda as bordas do formulário */
+    background-color: #f0f0f0; /* Cor de fundo do formulário */
+}
+
+/* Estilo para cada rótulo de campo */
+form label {
+    margin-bottom: 5px; /* Espaço abaixo do rótulo */
+    font-weight: bold; /* Deixa o texto do rótulo em negrito */
+}
+
+/* Estilo para os campos de entrada de dados */
+form input[type="text"],
+form input[type="email"],
+form input[type="tel"],
+form input[type="date"],
+form input[type="datetime-local"],
+form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo específico para a textarea */
+form textarea {
+    resize: vertical; /* Permite redimensionar a textarea verticalmente */
+    height: 100px;
+}
+
+/* Estilo para os botões de submit e reset */
+form input[type="submit"],
+form input[type="reset"] {
+    width: auto; /* Deixa o tamanho do botão ajustável */
+    background-color: #4CAF50; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Cursor de mãozinha ao passar por cima */
+    margin-top: 10px;
+}
+
+form input[type="submit"]:hover,
+form input[type="reset"]:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilo para os campos de sexo (radio buttons) e habilidades (checkboxes) */
+form .sexo {
+    display: flex;
+    flex-direction: row; /* Alinha os itens horizontalmente */
+    gap: 10px; /* Espaçamento entre as opções */
+    align-items: center; /* Alinha verticalmente no centro */
+}
+
+/* Estilo para os radio buttons */
+form input[type="radio"] {
+    margin-right: 5px; /* Espaço à direita dos radio buttons */
+}
+
+/* Estilo das labels para garantir que fiquem ao lado das caixinhas de marcação */
+form .sexo label {
+    margin-left: 5px; /* Espaço entre a caixinha e o texto */
+}
+
+
+/* Estilo para os radio buttons */
+form input[type="radio"] {
+    margin-right: 5px; /* Espaço à direita dos radio buttons */
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 0.875rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer p:first-child {
+    font-weight: bold;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    form h2 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script>
+        // Função para calcular a idade com base na data de nascimento
+        function calcularIdade() {
+            var dataNascimento = document.getElementById('data_nascimento').value;
+            var nascimento = new Date(dataNascimento);
+            var hoje = new Date();
+            var idade = hoje.getFullYear() - nascimento.getFullYear();
+            var m = hoje.getMonth() - nascimento.getMonth();
+
+            // Se a data de aniversário ainda não ocorreu este ano, subtrai 1 da idade
+            if (m < 0 || (m === 0 && hoje.getDate() < nascimento.getDate())) {
+                idade--;
+            }
+
+            document.getElementById('idade').value = idade;  // Preenche o campo "idade"
+        }
+    </script>
+    <style>
+        /* Centralizar o título */
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        /* Estilo para o subtítulo */
+        .subtitulo {
+            text-align: center;
+            font-size: 1.2em;  /* Ajusta o tamanho da fonte do subtítulo */
+            margin-top: 10px;   /* Espaço entre o título e o subtítulo */
+            margin-bottom: 30px; /* Espaço entre o subtítulo e o formulário */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Bem-vindo ao Sistema de Cadastro</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="desenvolvedores.html">Desenvolvedores</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Designer Network</h2> <!-- O título será centralizado aqui -->
+        
+        <!-- Subtítulo adicionado -->
+        <p class="subtitulo">
+            Este formulário tem como objetivo colher as informações dos designers e através de um sistema conectar os designers que possuem características semelhantes, para assim, poderem compartilhar conhecimento.
+        </p>
+        
+        <form action="server.php" method="POST" enctype="multipart/form-data">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone">
+
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" required onchange="calcularIdade()">
+
+            <label for="idade">Idade:</label>
+            <input type="text" id="idade" name="idade" disabled>
+
+            <label for="sexo">Sexo:</label>
+            <div class="sexo">
+                <input type="radio" id="masculino" name="sexo" value="Masculino" required>
+                <label for="masculino">Masculino</label>
+                <input type="radio" id="feminino" name="sexo" value="Feminino">
+                <label for="feminino">Feminino</label>
+            </div>
+
+            <label for="habilidades">Habilidades:</label>
+            <div class="habilidades">
+                <label for="html">
+                    <input type="checkbox" id="html" name="habilidades[]" value="HTML">
+                    HTML
+                </label>
+                <label for="css">
+                    <input type="checkbox" id="css" name="habilidades[]" value="CSS">
+                    CSS
+                </label>
+                <label for="js">
+                    <input type="checkbox" id="js" name="habilidades[]" value="JavaScript">
+                    JavaScript
+                </label>
+                
+                <label for="outras_habilidades">
+                    <p>Outras habilidades (se houver):</p></label>
+                <input type="text" id="outras_habilidades" name="outras_habilidades" placeholder="Outros">
+            </div>
+
+            <label for="endereco">Endereço:</label>
+            <input type="text" id="endereco" name="endereco">
+
+            <label for="comentarios">Curiosidades sobre você:</label>
+            <textarea id="comentarios" name="comentarios"></textarea>
+
+            <label for="data_registro">Data de Registro:</label>
+            <input type="datetime-local" id="data_registro" name="data_registro">
+
+            <label for="arquivo">Adicione aqui algum arquivo que demonstre seu trabalho:</label>
+            <input type="file" id="arquivo" name="arquivo">
+
+            <input type="submit" value="Cadastrar">
+            <input type="reset" value="Limpar">
+        </form>
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>IFRN Campus Santa Cruz</p>
+        <p>Trabalho de Autoria Web</p>
+        <p>Prof. Marcelo Figueiredo Barbosa Júnior</p>
+        <p>Nome dos desenvolvedores: Jose Antoniel da Silva Morais, Ludmylla Silva Felix de Lima</p>
+    </footer>
+
+</body>
+</html>
